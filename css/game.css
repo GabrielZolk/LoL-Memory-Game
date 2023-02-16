@@ -10,7 +10,8 @@ main {
     padding: 20px 20px 50px;
 }
 
-.player, .timer {
+.player,
+.timer {
     color: white;
 }
 
@@ -67,7 +68,7 @@ header {
 }
 
 .back:hover {
-    filter:brightness(3);
+    filter: brightness(3);
 }
 
 .reveal-card {
@@ -76,5 +77,72 @@ header {
 
 .disabled-card {
     filter: saturate(0);
-    opacity: 0.5;
+    opacity: 1;
+}
+
+.left-container {
+    background-image: url('../images/back.png');
+    background-size: cover;
+    background-position: center;
+    border: 2px solid aqua;
+    border-radius: 5px;
+    position: absolute;
+    top: 100px;
+    right: 17px;
+    width: 280px;
+    height: 532px;
+}
+
+.right-container {
+    background-image: url('../images/back.png');
+    background-size: cover;
+    background-position: center;
+    border: 2px solid aqua;
+    border-radius: 5px;
+    position: absolute;
+    top: 100px;
+    left: 17px;
+    width: 280px;
+    height: 532px;
+}
+
+.blink {
+    animation-name: blink;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 2;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    
+    50% {
+        opacity: 0;
+    }
+    
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.bright {
+    animation-name: bright;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  
+@keyframes bright {
+    0% {
+        filter: brightness(4);
+    }
+
+    100% {
+        filter: brightness(1);
+    }
 }

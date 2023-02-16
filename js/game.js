@@ -1,6 +1,8 @@
 const grid = document.querySelector('.grid')
 const spanPlayer = document.querySelector('.player')
 const timer = document.querySelector('.timer')
+const left = document.querySelector('.left-container')
+const right = document.querySelector('.right-container')
 
 const katarinas = [
     'kda',
@@ -47,8 +49,16 @@ function endGame() {
 
     if(reveledCards.length === 0) {
         clearInterval(this.loop)
+
+        setTimeout(() => {
+            right.style.backgroundImage = 'url("../images/challenger.png")'
+            left.style.backgroundImage = 'url("../images/challenger.png")'
+            right.style.backgroundSize = '98% 100%';
+            left.style.backgroundSize = '98% 100%';
+        }, 300)
         setTimeout(() => {
             alert(`Parabéns, ${spanPlayer.innerHTML}! You WIN! Seu tempo foi: ${timer.innerHTML} segundos`)
+
         }, 500)
     }
 }
@@ -60,6 +70,22 @@ const checkCards = () => {
     if(firstKat === secondKat) {
         firstCard.firstChild.classList.remove('disabled-card')
         secondCard.firstChild.classList.remove('disabled-card')
+        right.classList.remove('disabled-card') 
+        left.classList.remove('disabled-card') 
+        right.classList.add('blink')
+        left.classList.add('blink')
+        setTimeout(() => {
+            right.style.backgroundImage = 'url("../images/back.png")'
+            left.style.backgroundImage = 'url("../images/back.png")'
+            right.classList.add('bright')
+            left.classList.add('bright')
+            right.classList.remove('blink')
+            left.classList.remove('blink')
+        }, 1000)
+        setTimeout(() => {
+            right.classList.remove('bright')
+            left.classList.remove('bright')
+        }, 1200)
     
         firstCard = ''
         secondCard = ''
@@ -69,6 +95,10 @@ const checkCards = () => {
         setTimeout(() => {
             firstCard.classList.remove('reveal-card')
             secondCard.classList.remove('reveal-card')
+            right.style.backgroundImage = 'url("../images/back.png")'
+            left.style.backgroundImage = 'url("../images/back.png")'
+            right.classList.remove('disabled-card') 
+            left.classList.remove('disabled-card') 
 
             firstCard = ''
             secondCard = ''
@@ -76,7 +106,7 @@ const checkCards = () => {
     }
 }
 
-const revealCard = ({ target }) => {
+const revealCard = ({ target }, katarina = target.parentNode.getAttribute('data-katarina')) => {
     
     if(target.parentNode.className.includes('reveal-card')) {
         return; 
@@ -85,9 +115,13 @@ const revealCard = ({ target }) => {
     if(firstCard === '') {
         target.parentNode.classList.add('reveal-card')
         firstCard = target.parentNode
+        right.style.backgroundImage = `url('../images/${katarina}.png')` 
+        right.classList.add('disabled-card') 
     } else if (secondCard === '') {
         target.parentNode.classList.add('reveal-card')
         secondCard = target.parentNode
+        left.style.backgroundImage = `url('../images/${katarina}.png')`
+        left.classList.add('disabled-card') 
 
         checkCards()
     }
