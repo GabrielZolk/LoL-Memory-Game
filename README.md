@@ -51,5 +51,5 @@
 
 <br>
 
-[Link](https://gabrielzolk.github.io/LoL-Memory-Game/,  "Deploy")
+[Link](https://gabrielzolk.github.io/LoL-Memory-Game)
 
