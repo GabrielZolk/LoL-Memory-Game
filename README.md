@@ -51,5 +51,5 @@
 
 <br>
 
-[Link](https://gabrielzolk.github.io/LoL-Memory-Game)
+🔗 [Link](https://gabrielzolk.github.io/LoL-Memory-Game)
 
