@@ -1,4 +1,4 @@
-# 🔥 🔴🔵🟣🟤⚫⚪JOGO DA MEMÓRIA COM TEMA DO JOGO LEAGUE OF LEGENDS 🔥
+# 🔥 JOGO DA MEMÓRIA COM TEMA DO JOGO LEAGUE OF LEGENDS 🔥
 
 
 <br>
@@ -26,7 +26,7 @@
 
 <br>
 
-## Sidecards
+## Sidecards 🧠
 
 <br>
 
@@ -34,12 +34,12 @@
 
 <br>
 
-### O jogo tambem possui duas cards laterais para facilitação da visualização da carta para melhor memorização 🧠
+### O jogo tambem possui dois cards laterais para facilitação da visualização da carta para melhor memorização 
 
 <br>
 <br>
 
-## Cards pós acerto
+## Cards pós acerto 🃏
 
 <br>
 
@@ -47,4 +47,4 @@
 
 <br>
 
-#### Ao achar duas cartas iguais, ambas ficam coloridas e com a face virada.
+#### Ao achar duas cartas iguais, ambas ficam coloridas e com a face virada. As cartas menores permanentemente é claro, e as maiores (sidecard) somente no momento do acerto.
