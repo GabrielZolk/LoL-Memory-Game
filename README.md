@@ -48,3 +48,8 @@
 <br>
 
 #### Ao achar duas cartas iguais, ambas ficam coloridas e com a face virada. As cartas menores permanentemente é claro, e as maiores (sidecard) somente no momento do acerto.
+
+<br>
+
+[Link](https://gabrielzolk.github.io/LoL-Memory-Game/,  "Deploy")
+
